@@ -176,14 +176,27 @@ body {
 }
 
 .hero-title {
-    font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 700;
     margin-bottom: var(--space-2xl);
     padding: var(--space-xl) 0;
-    background: linear-gradient(135deg, var(--text-primary) 0%, var(--green-primary) 100%);
+    background: linear-gradient(135deg, #000000 0%, var(--green-primary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    white-space: nowrap;
+}
+
+/* Allow wrapping only on very small screens */
+@media (max-width: 480px) {
+    .hero-title {
+        white-space: normal;
+    }
+}
+
+/* Dark mode headline gradient */
+[data-theme="dark"] .hero-title {
+    background: linear-gradient(135deg, #ffffff 0%, var(--green-light) 100%);
 }
 
 .hero-subtitle {
@@ -260,6 +273,17 @@ body {
     font-weight: 700;
     text-align: center;
     margin-bottom: var(--space-2xl);
+    background: linear-gradient(135deg, #000000 0%, var(--green-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Dark mode section titles */
+[data-theme="dark"] .section-title {
+    background: linear-gradient(135deg, #ffffff 0%, var(--green-light) 100%);
 }
 
 /* Value Proposition */
