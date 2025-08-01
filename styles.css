@@ -176,7 +176,7 @@ body {
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: var(--space-2xl);
     padding: var(--space-xl) 0;
@@ -516,7 +516,8 @@ code {
 /* Responsive */
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        white-space: normal;
     }
     
     .section-title {
