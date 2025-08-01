@@ -284,8 +284,17 @@ body {
     line-height: 1.2;
 }
 
+h2.section-title {
+    background: linear-gradient(135deg, #1a1a1a 0%, var(--green-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
 /* Dark mode section titles */
-[data-theme="dark"] .section-title {
+[data-theme="dark"] .section-title,
+[data-theme="dark"] h2.section-title {
     background: linear-gradient(135deg, #ffffff 0%, #10a37f 100%);
 }
 
