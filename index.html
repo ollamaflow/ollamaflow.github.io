@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OllamaFlow - Scale Your Ollama Infrastructure</title>
+    <meta name="description" content="Intelligent load balancing and model orchestration for Ollama. Transform multiple Ollama instances into a unified, high-availability AI inference cluster.">
+    <link rel="icon" type="image/x-icon" href="https://github.com/ollamaflow/ollamaflow/blob/main/assets/favicon.ico?raw=true">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <img src="https://github.com/ollamaflow/ollamaflow/blob/main/assets/logo.png?raw=true" alt="OllamaFlow Logo" class="logo">
+                    <span class="brand-name">OllamaFlow</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#use-cases" class="nav-link">Use Cases</a>
+                    <a href="#get-started" class="nav-link">Get Started</a>
+                    <a href="https://github.com/ollamaflow/ollamaflow" target="_blank" class="nav-link github-link">
+                        <svg class="github-icon" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <svg class="sun-icon" viewBox="0 0 24 24">
+                            <path d="M12 17.5C14.76 17.5 17 15.26 17 12.5C17 9.74 14.76 7.5 12 7.5C9.24 7.5 7 9.74 7 12.5C7 15.26 9.24 17.5 12 17.5ZM12 1V4M12 20V23M4.22 4.22L6.34 6.34M17.66 17.66L19.78 19.78M1 12H4M20 12H23M4.22 19.78L6.34 17.66M17.66 6.34L19.78 4.22"/>
+                        </svg>
+                        <svg class="moon-icon" viewBox="0 0 24 24">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Scale Your Ollama Infrastructure</h1>
+                <p class="hero-subtitle">
+                    Intelligent load balancing and model orchestration that transforms multiple Ollama instances 
+                    into a unified, high-availability AI inference cluster
+                </p>
+                <div class="hero-badges">
+                    <span class="badge">MIT Licensed</span>
+                    <span class="badge">Free & Open Source</span>
+                    <span class="badge">.NET 8.0</span>
+                </div>
+                <div class="hero-actions">
+                    <a href="#get-started" class="btn btn-primary">Get Started</a>
+                    <a href="https://github.com/ollamaflow/ollamaflow" target="_blank" class="btn btn-secondary">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="value-prop">
+        <div class="container">
+            <h2 class="section-title">Why OllamaFlow?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Multiple Virtual Endpoints</h3>
+                    <p>Create multiple frontend endpoints, each mapping to their own set of Ollama backends for complete flexibility</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚖️</div>
+                    <h3>Smart Load Balancing</h3>
+                    <p>Distribute requests intelligently across healthy backends using round-robin or random strategies</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Automatic Model Sync</h3>
+                    <p>Ensure all backends have required models with automatic discovery and parallel downloading</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">❤️</div>
+                    <h3>Health Monitoring</h3>
+                    <p>Real-time health checks with configurable thresholds ensure requests only go to healthy backends</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Zero Downtime</h3>
+                    <p>Seamlessly handle backend failures without dropping requests through automatic failover</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛠️</div>
+                    <h3>RESTful Admin API</h3>
+                    <p>Full control through a comprehensive management API with bearer token authentication</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="feature-columns">
+                <div class="feature-column">
+                    <h3>Load Balancing</h3>
+                    <ul>
+                        <li>Round-robin and random distribution</li>
+                        <li>Request routing based on health</li>
+                        <li>Automatic failover</li>
+                        <li>Configurable rate limiting</li>
+                    </ul>
+                </div>
+                <div class="feature-column">
+                    <h3>Model Management</h3>
+                    <ul>
+                        <li>Automatic model discovery</li>
+                        <li>Intelligent synchronization</li>
+                        <li>Dynamic model requirements</li>
+                        <li>Parallel downloads</li>
+                    </ul>
+                </div>
+                <div class="feature-column">
+                    <h3>Enterprise Ready</h3>
+                    <ul>
+                        <li>Bearer token authentication</li>
+                        <li>Comprehensive logging</li>
+                        <li>Docker & Compose ready</li>
+                        <li>SQLite persistence</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section id="use-cases" class="use-cases">
+        <div class="container">
+            <h2 class="section-title">Use Cases</h2>
+            <div class="use-case-grid">
+                <div class="use-case-card">
+                    <h3>GPU Cluster Management</h3>
+                    <p>Distribute AI workloads across multiple GPU servers for maximum performance and utilization</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>CPU Infrastructure</h3>
+                    <p>Perfect for dense CPU systems like Ampere processors, enabling cost-effective AI inference</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>High Availability</h3>
+                    <p>Ensure your AI services stay online 24/7 with automatic failover and health monitoring</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Development & Testing</h3>
+                    <p>Easily switch between different model configurations and test various deployment scenarios</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Cost Optimization</h3>
+                    <p>Maximize hardware utilization across your infrastructure by intelligently routing requests</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Multi-Tenant Scenarios</h3>
+                    <p>Isolate workloads while sharing infrastructure through multiple frontend configurations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Started -->
+    <section id="get-started" class="get-started">
+        <div class="container">
+            <h2 class="section-title">Get Started in Minutes</h2>
+            <div class="install-options">
+                <div class="install-option">
+                    <h3>Using Docker</h3>
+                    <pre><code># Pull the image
+docker pull ollamaflow/ollamaflow
+
+# Run with configuration
+docker run -d -p 43411:43411 \
+  -v $(pwd)/ollamaflow.json:/app/ollamaflow.json \
+  ollamaflow/ollamaflow</code></pre>
+                </div>
+                <div class="install-option">
+                    <h3>Using .NET</h3>
+                    <pre><code># Clone and build
+git clone https://github.com/ollamaflow/ollamaflow.git
+cd ollamaflow && dotnet build
+
+# Run
+cd OllamaFlow.Server/bin/Debug/net8.0
+dotnet OllamaFlow.Server.dll</code></pre>
+                </div>
+            </div>
+            <div class="cta-section">
+                <p>Complete Postman collection included for easy API testing!</p>
+                <a href="https://github.com/ollamaflow/ollamaflow" target="_blank" class="btn btn-primary">View Documentation on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <img src="https://github.com/ollamaflow/ollamaflow/blob/main/assets/logo.png?raw=true" alt="OllamaFlow" class="footer-logo">
+                    <p>OllamaFlow is free, open-source software licensed under the MIT License.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/ollamaflow/ollamaflow" target="_blank">GitHub</a>
+                    <a href="https://github.com/ollamaflow/ollamaflow/issues" target="_blank">Issues</a>
+                    <a href="https://github.com/ollamaflow/ollamaflow/blob/main/LICENSE.md" target="_blank">License</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 OllamaFlow. Built with ❤️ for the AI community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
