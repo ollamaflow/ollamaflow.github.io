@@ -16,7 +16,7 @@
     --green-lighter: #e6f7f1;
     
     /* Accent colors */
-    --accent-hover: #0d8064;
+    --accent-hover: #0a5c4a;
     --shadow-sm: rgba(0, 0, 0, 0.05);
     --shadow-md: rgba(0, 0, 0, 0.1);
     
@@ -351,7 +351,7 @@ body {
 /* Features Section */
 .features {
     padding: var(--space-3xl) 0;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary);
 }
 
 .feature-columns {
@@ -388,7 +388,7 @@ body {
 /* Use Cases */
 .use-cases {
     padding: var(--space-3xl) 0;
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-primary);
 }
 
 .use-case-grid {
@@ -398,7 +398,7 @@ body {
 }
 
 .use-case-card {
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary);
     padding: var(--space-xl);
     border-radius: 12px;
     border: 1px solid var(--border-color);
@@ -417,7 +417,7 @@ body {
 /* Get Started */
 .get-started {
     padding: var(--space-3xl) 0;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary);
 }
 
 .install-options {
