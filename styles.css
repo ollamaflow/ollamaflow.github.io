@@ -176,7 +176,7 @@ body {
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
     margin-bottom: var(--space-2xl);
     padding: var(--space-xl) 0;
@@ -185,8 +185,6 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .hero-subtitle {
