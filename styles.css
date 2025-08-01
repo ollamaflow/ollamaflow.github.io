@@ -176,7 +176,7 @@ body {
 }
 
 .hero-title {
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 700;
     margin-bottom: var(--space-2xl);
     padding: var(--space-xl) 0;
@@ -185,6 +185,8 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .hero-subtitle {
@@ -516,7 +518,9 @@ code {
 /* Responsive */
 @media (max-width: 768px) {
     .hero-title {
-        font-size: clamp(2.25rem, 7vw, 3.5rem);
+        font-size: 2rem;
+        white-space: normal;
+        line-height: 1.2;
     }
     
     .section-title {
