@@ -193,12 +193,12 @@
             <h2 class="section-title">Use Cases</h2>
             <div class="use-case-grid">
                 <div class="use-case-card">
-                    <h3>GPU Cluster Management</h3>
-                    <p>Distribute AI workloads across multiple GPU servers for maximum performance and utilization</p>
-                </div>
-                <div class="use-case-card">
                     <h3>Scalable CPU Inference</h3>
                     <p>Perfect for dense CPU systems like <a href="https://www.amperecomputing.com" target="_blank" style="color: var(--green-primary); text-decoration: underline;">Ampere</a> processors, enabling cost-effective AI inference</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>GPU Cluster Management</h3>
+                    <p>Distribute AI workloads across multiple GPU servers for maximum performance and utilization</p>
                 </div>
                 <div class="use-case-card">
                     <h3>High Availability</h3>
@@ -239,7 +239,7 @@ docker run -d -p 43411:43411 \
                     <h3>Using .NET</h3>
                     <pre><code># Clone and build
 git clone https://github.com/ollamaflow/ollamaflow.git
-cd ollamaflow && dotnet build
+cd ollamaflow/src && dotnet build
 
 # Run
 cd OllamaFlow.Server/bin/Debug/net8.0
