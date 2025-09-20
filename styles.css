@@ -125,13 +125,13 @@ body {
     color: var(--green-primary);
 }
 
-.github-link {
+.github-link, .api-docs-link {
     display: flex;
     align-items: center;
     gap: var(--space-xs);
 }
 
-.github-icon {
+.github-icon, .api-docs-icon {
     width: 20px;
     height: 20px;
     fill: currentColor;
@@ -528,7 +528,7 @@ code {
         gap: var(--space-md);
     }
     
-    .nav-link:not(.github-link):not(:last-child) {
+    .nav-link:not(.github-link):not(.api-docs-link):not(:last-child) {
         display: none;
     }
     
