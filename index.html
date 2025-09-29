@@ -14,7 +14,7 @@
         <div class="container">
             <div class="nav-content">
                 <div class="nav-brand">
-                    <img src="https://raw.githubusercontent.com/ollamaflow/ollamaflow/main/assets/logo.png" alt="OllamaFlow Logo" class="logo">
+                    <img src="../ollamaflow/assets/logo.png" alt="OllamaFlow Logo" class="logo">
                     <span class="brand-name">OllamaFlow</span>
                 </div>
                 <div class="nav-links">
@@ -50,10 +50,10 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Scale Your Ollama Infrastructure</h1>
+                <h1 class="hero-title">Scale Your AI Infrastructure</h1>
                 <p class="hero-subtitle">
-                    Intelligent load balancing and model orchestration that transforms multiple Ollama instances 
-                    into a unified, high-availability AI inference cluster
+                    Intelligent load-balancing and model orchestration that transforms multiple AI inferencing and embeddings instances
+                    into a unified, high-availability cluster
                 </p>
                 <div class="hero-badges">
                     <span class="badge">MIT Licensed</span>
@@ -86,7 +86,7 @@
                 <div class="feature-card">
                     <div class="feature-icon">🎯</div>
                     <h3>Multiple Virtual Endpoints</h3>
-                    <p>Create multiple virtual Ollama endpoints, each mapping to a series of backend Ollama instances</p>
+                    <p>Create multiple virtual Ollama or OpenAI-compatible endpoints, each mapping to a series of backend instances of Ollama, vLLM, SharpAI, and more!</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⚖️</div>
@@ -96,7 +96,7 @@
                 <div class="feature-card">
                     <div class="feature-icon">🔄</div>
                     <h3>Automatic Model Sync</h3>
-                    <p>Ensure all backends have required models with automatic discovery and parallel downloading</p>
+                    <p>Ensure all Ollama backends have required models with automatic discovery and parallel downloads</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">❤️</div>
@@ -120,44 +120,62 @@
     <!-- API Compatibility -->
     <section class="api-compat">
         <div class="container">
-            <h2 class="section-title">Compatibility with Ollama API</h2>
-            <p class="section-subtitle">OllamaFlow transparently proxies all Ollama API endpoints while adding intelligent routing and management capabilities</p>
-            <div class="api-grid">
-                <div class="api-item">
-                    <code>/api/generate</code>
-                    <span>Text generation</span>
+            <h2 class="section-title">Compatibility with Ollama and OpenAI APIs</h2>
+            <p class="section-subtitle">OllamaFlow translates Ollama and OpenAI API requests based on what your backend supports, while adding intelligent routing, high availability, and management</p>
+            <div class="api-columns">
+                <div class="api-column">
+                    <h3>Ollama APIs</h3>
+                    <div class="api-grid">
+                        <div class="api-item">
+                            <code>/api/generate</code>
+                            <span>Text generation</span>
+                        </div>
+                        <div class="api-item">
+                            <code>/api/chat</code>
+                            <span>Chat completions</span>
+                        </div>
+                        <div class="api-item">
+                            <code>/api/pull</code>
+                            <span>Model pulling</span>
+                        </div>
+                        <div class="api-item">
+                            <code>/api/push</code>
+                            <span>Model pushing</span>
+                        </div>
+                        <div class="api-item">
+                            <code>/api/show</code>
+                            <span>Model information</span>
+                        </div>
+                        <div class="api-item">
+                            <code>/api/tags</code>
+                            <span>List models</span>
+                        </div>
+                        <div class="api-item">
+                            <code>/api/ps</code>
+                            <span>Running models</span>
+                        </div>
+                        <div class="api-item">
+                            <code>/api/embed</code>
+                            <span>Generate embeddings</span>
+                        </div>
+                        <div class="api-item">
+                            <code>/api/delete</code>
+                            <span>Delete models</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="api-item">
-                    <code>/api/chat</code>
-                    <span>Chat completions</span>
-                </div>
-                <div class="api-item">
-                    <code>/api/pull</code>
-                    <span>Model pulling</span>
-                </div>
-                <div class="api-item">
-                    <code>/api/push</code>
-                    <span>Model pushing</span>
-                </div>
-                <div class="api-item">
-                    <code>/api/show</code>
-                    <span>Model information</span>
-                </div>
-                <div class="api-item">
-                    <code>/api/tags</code>
-                    <span>List models</span>
-                </div>
-                <div class="api-item">
-                    <code>/api/ps</code>
-                    <span>Running models</span>
-                </div>
-                <div class="api-item">
-                    <code>/api/embed</code>
-                    <span>Generate embeddings</span>
-                </div>
-                <div class="api-item">
-                    <code>/api/delete</code>
-                    <span>Delete models</span>
+                <div class="api-column">
+                    <h3>OpenAI APIs</h3>
+                    <div class="api-grid">
+                        <div class="api-item">
+                            <code>/v1/chat/completions</code>
+                            <span>Chat completions</span>
+                        </div>
+                        <div class="api-item">
+                            <code>/v1/embeddings</code>
+                            <span>Generate embeddings</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -178,7 +196,7 @@
                     </ul>
                 </div>
                 <div class="feature-column">
-                    <h3>Model Management</h3>
+                    <h3>Ollama Model Management</h3>
                     <ul>
                         <li>Automatic model discovery</li>
                         <li>Intelligent synchronization</li>
@@ -205,8 +223,8 @@
             <h2 class="section-title">Use Cases</h2>
             <div class="use-case-grid">
                 <div class="use-case-card">
-                    <h3>Scalable CPU Inference</h3>
-                    <p>Perfect for dense CPU systems like <a href="https://www.amperecomputing.com" target="_blank" style="color: var(--green-primary); text-decoration: underline;">Ampere</a> processors, enabling cost-effective AI inference</p>
+                    <h3>Scalable Inference</h3>
+                    <p>Perfect for GPU systems and dense CPU systems like those powered by <a href="https://www.amperecomputing.com" target="_blank" style="color: var(--blue-primary); text-decoration: underline;">Ampere</a> processors</p>
                 </div>
                 <div class="use-case-card">
                     <h3>GPU Cluster Management</h3>
@@ -283,7 +301,7 @@ dotnet OllamaFlow.Server.dll</code></pre>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-info">
-                    <img src="https://raw.githubusercontent.com/ollamaflow/ollamaflow/main/assets/logo.png" alt="OllamaFlow" class="footer-logo">
+                    <img src="../ollamaflow/assets/logo.png" alt="OllamaFlow" class="footer-logo">
                     <p>OllamaFlow is free, open-source software licensed under the MIT License.</p>
                 </div>
                 <div class="footer-links">

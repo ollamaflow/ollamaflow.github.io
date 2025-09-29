@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:litegraphdb.com)"
+      "WebFetch(domain:litegraphdb.com)",
+      "Read(//c/Code/OllamaFlow/ollamaflow/assets/**)"
     ],
     "deny": [],
     "ask": []
