@@ -525,6 +525,24 @@ code {
     color: var(--text-tertiary);
 }
 
+.footer-bottom a {
+    color: var(--text-tertiary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-bottom a:hover {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .footer-bottom a {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .footer-bottom a:hover {
+    color: var(--blue-light);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .hero-title {
