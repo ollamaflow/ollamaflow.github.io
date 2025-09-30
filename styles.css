@@ -399,49 +399,27 @@ body {
     align-items: center;
 }
 
-.explorer-mockup {
-    background-color: var(--bg-tertiary);
-    border-radius: 12px;
-    padding: var(--space-lg);
+.explorer-screenshot-link {
+    display: block;
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 12px;
+    overflow: hidden;
     box-shadow: 0 8px 24px var(--shadow-md);
     border: 1px solid var(--border-color);
 }
 
-.mockup-header {
-    display: flex;
-    gap: var(--space-xs);
-    margin-bottom: var(--space-md);
-    padding-bottom: var(--space-md);
-    border-bottom: 1px solid var(--border-color);
+.explorer-screenshot-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px var(--shadow-md);
 }
 
-.mockup-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: var(--text-tertiary);
-}
-
-.mockup-content {
-    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-    font-size: 0.875rem;
-}
-
-.mockup-line {
-    padding: var(--space-xs) 0;
-    color: var(--text-primary);
-}
-
-.mockup-indent {
-    padding-left: var(--space-lg);
-    color: var(--text-secondary);
-}
-
-.mockup-response {
-    color: var(--blue-primary);
-    padding-left: var(--space-md);
+.explorer-screenshot {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* API Compatibility Section */
@@ -796,7 +774,7 @@ code {
         gap: var(--space-xl);
     }
 
-    .explorer-mockup {
+    .explorer-screenshot-link {
         max-width: 100%;
     }
 

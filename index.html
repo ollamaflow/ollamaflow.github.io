@@ -53,8 +53,7 @@
             <div class="hero-content">
                 <h1 class="hero-title">Scale Your AI Infrastructure</h1>
                 <p class="hero-subtitle">
-                    Intelligent load-balancing and model orchestration that transforms multiple AI inferencing and embeddings instances
-                    into a unified, high-availability cluster
+                    Intelligent load-balancing, model orchestration, API control, and API request conformance to transform multiple AI inferencing and embeddings instances info a unified, high-availability fabric
                 </p>
                 <div class="hero-badges">
                     <span class="badge">MIT Licensed</span>
@@ -100,6 +99,11 @@
                     <p>Ensure all Ollama backends have required models with automatic discovery and parallel downloads</p>
                 </div>
                 <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Security and Compliance</h3>
+                    <p>Control how your hardware resources are used and ensure API request conformance to confidently scale</p>
+                </div>
+                <div class="feature-card">
                     <div class="feature-icon">❤️</div>
                     <h3>Health Monitoring</h3>
                     <p>Real-time health checks with configurable thresholds ensure requests only go to healthy backends</p>
@@ -108,11 +112,6 @@
                     <div class="feature-icon">📊</div>
                     <h3>Reduce Downtime</h3>
                     <p>Seamlessly handle backend failures through healthchecks and request proxying to healthy endpoints automatically</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🛠️</div>
-                    <h3>RESTful Admin API</h3>
-                    <p>Full control through a comprehensive management API with bearer token authentication</p>
                 </div>
             </div>
         </div>
@@ -184,11 +183,11 @@
                 <p>OllamaFlow works seamlessly with multiple AI inference platforms:</p>
                 <div class="backend-logos">
                     <div class="backend-item">
-                        <strong>Ollama</strong>
+                        <strong><a href="https://ollama.com" target="_blank">Ollama</a></strong>
                         <span>Local LLM inference</span>
                     </div>
                     <div class="backend-item">
-                        <strong>vLLM</strong>
+                        <strong><a href="https://vllm.ai" target="_blank">vLLM</a></strong>
                         <span>High-performance inference</span>
                     </div>
                     <div class="backend-item">
@@ -196,7 +195,7 @@
                         <span>.NET local inference</span>
                     </div>
                     <div class="backend-item">
-                        <strong>OpenAI</strong>
+                        <strong><a href="https://openai.com" target="_blank">OpenAI</a></strong>
                         <span>Cloud AI services</span>
                     </div>
                     <div class="backend-item">
@@ -212,7 +211,7 @@
     <section id="security" class="security-section">
         <div class="container">
             <h2 class="section-title">Security & Control</h2>
-            <p class="section-subtitle">OllamaFlow provides fine-grained security controls to ensure AI services are used safely and according to organizational policies</p>
+            <p class="section-subtitle">Fine-grained security controls to ensure AI endpoints are used in accordance with your objectives, allowing you to confidently scale</p>
             <div class="security-grid">
                 <div class="security-card">
                     <div class="security-icon">🔒</div>
@@ -228,11 +227,6 @@
                     <div class="security-icon">🛡️</div>
                     <h3>Multi-Tenant Isolation</h3>
                     <p>Configure multiple frontends with different security policies to safely serve different teams or customers</p>
-                </div>
-                <div class="security-card">
-                    <div class="security-icon">👨‍💼</div>
-                    <h3>Administrator Oversight</h3>
-                    <p>Administrators maintain full control over which models can be used and how requests are processed</p>
                 </div>
             </div>
         </div>
@@ -263,20 +257,9 @@
                     </div>
                 </div>
                 <div class="explorer-visual">
-                    <div class="explorer-mockup">
-                        <div class="mockup-header">
-                            <span class="mockup-dot"></span>
-                            <span class="mockup-dot"></span>
-                            <span class="mockup-dot"></span>
-                        </div>
-                        <div class="mockup-content">
-                            <div class="mockup-line">POST /api/chat</div>
-                            <div class="mockup-line mockup-indent">{ "model": "llama3.2", ...</div>
-                            <div class="mockup-line mockup-response">→ Testing API responses</div>
-                            <div class="mockup-line mockup-response">→ Validating configurations</div>
-                            <div class="mockup-line mockup-response">→ Debugging requests</div>
-                        </div>
-                    </div>
+                    <a href="assets/api-explorer-screenshot.png" target="_blank" class="explorer-screenshot-link">
+                        <img src="assets/api-explorer-screenshot.png" alt="API Explorer Screenshot" class="explorer-screenshot">
+                    </a>
                 </div>
             </div>
         </div>
