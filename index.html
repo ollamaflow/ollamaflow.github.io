@@ -168,6 +168,10 @@
                     <h3>OpenAI APIs</h3>
                     <div class="api-grid">
                         <div class="api-item">
+                            <code>/v1/completions</code>
+                            <span>Completions</span>
+                        </div>
+                        <div class="api-item">
                             <code>/v1/chat/completions</code>
                             <span>Chat completions</span>
                         </div>
@@ -342,12 +346,13 @@
                 <div class="install-option">
                     <h3>Using Docker</h3>
                     <pre><code># Pull the image
-docker pull ollamaflow/ollamaflow
+docker pull jchristn/ollamaflow:v1.1.0
 
 # Run with configuration
 docker run -d -p 43411:43411 \
   -v $(pwd)/ollamaflow.json:/app/ollamaflow.json \
-  ollamaflow/ollamaflow</code></pre>
+  -v $(pwd)/ollamaflow.db:/app/ollamaflow.db \
+  jchristn/ollamaflow:v1.1.0</code></pre>
                 </div>
                 <div class="install-option">
                     <h3>Using .NET</h3>
